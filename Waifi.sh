@@ -1,5 +1,4 @@
 #! /bin/bash/
-
 helper='Waifi'
 versnum='1.1'
 
@@ -11,13 +10,8 @@ versnum='1.1'
 				""		"Linssid"		"GNU Public License V3"		"apt" \
 				""		"Gnome Network Manager"	"GNU Public License V3"		"apt")
 
-
 	gnm=$(echo $waifi | grep -c "Gnome Network Manager")
 	lins=$(echo $waifi | grep -c "Linssid")
-
-
-
-
 
 	if [ $gnm -gt '0' ]; then
 	sudo apt-get install network-manager -y
@@ -28,4 +22,3 @@ versnum='1.1'
 	sudo apt-get update -y
 	sudo apt-get install linssid -y
 	fi
-
